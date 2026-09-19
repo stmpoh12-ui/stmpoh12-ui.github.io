@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=3" />
   </head>
   <body>
     <div class="scanlines" aria-hidden="true"></div>
@@ -16,62 +16,28 @@
       <div class="container nav">
         <a class="brand" href="#top"><span class="brand-mark">◈</span> STMP<span>OH12</span></a>
         <nav class="nav-links" aria-label="Main navigation">
-          <a href="#about">About</a>
-          <a href="#projects">Builds</a>
-          <a href="#notes">Notes</a>
-          <a href="#contact">Contact</a>
+          <a href="#about">About</a><a href="#projects">Builds</a><a href="#notes">Notes</a><a href="#contact">Contact</a>
         </nav>
         <div class="status"><i></i> ONLINE</div>
       </div>
     </header>
-
     <main id="top">
       <section class="hero container">
         <div class="hero-copy">
           <p class="eyebrow"><span>01</span> / PERSONAL TECH LAB</p>
           <h1>Hardware meets<br /><em>imagination.</em></h1>
           <p class="tagline">Engineering notes, PCB experiments, embedded systems, and software projects from my workbench.</p>
-          <div class="cta-row">
-            <a class="button primary" href="#projects">Explore the lab <span>→</span></a>
-            <a class="button secondary" href="#notes">Read the log</a>
-          </div>
-          <div class="metrics">
-            <div><strong>24</strong><span>experiments</span></div>
-            <div><strong>07</strong><span>PCBs routed</span></div>
-            <div><strong>∞</strong><span>ideas loading</span></div>
-          </div>
+          <div class="cta-row"><a class="button primary" href="#projects">Explore the lab <span>→</span></a><a class="button secondary" href="#notes">Read the log</a></div>
+          <div class="metrics"><div><strong>24</strong><span>experiments</span></div><div><strong>07</strong><span>PCBs routed</span></div><div><strong>∞</strong><span>ideas loading</span></div></div>
         </div>
-        <div class="pcb-board" aria-label="Decorative printed circuit board illustration">
-          <div class="chip chip-main"><b>MCU</b><small>STM // 32</small></div>
-          <div class="chip chip-small"><b>IC</b></div>
-          <div class="led led-one"></div><div class="led led-two"></div><div class="led led-three"></div>
-          <span class="board-label label-a">PWR_IN</span><span class="board-label label-b">JTAG</span><span class="board-label label-c">REV_01</span>
-          <div class="trace t1"></div><div class="trace t2"></div><div class="trace t3"></div><div class="trace t4"></div><div class="trace t5"></div><div class="trace t6"></div>
-          <div class="via v1"></div><div class="via v2"></div><div class="via v3"></div><div class="via v4"></div><div class="via v5"></div>
-          <div class="board-corner"></div>
-        </div>
+        <div class="pcb-board" aria-label="Decorative printed circuit board illustration"><div class="chip chip-main"><b>MCU</b><small>STM // 32</small></div><div class="chip chip-small"><b>IC</b></div><div class="led led-one"></div><div class="led led-two"></div><div class="led led-three"></div><span class="board-label label-a">PWR_IN</span><span class="board-label label-b">JTAG</span><span class="board-label label-c">REV_01</span><div class="trace t1"></div><div class="trace t2"></div><div class="trace t3"></div><div class="trace t4"></div><div class="trace t5"></div><div class="trace t6"></div><div class="via v1"></div><div class="via v2"></div><div class="via v3"></div><div class="via v4"></div><div class="via v5"></div><div class="board-corner"></div></div>
       </section>
-
-      <section id="about" class="section container split">
-        <div><p class="section-label">02 / ABOUT THE BUILDER</p><h2>Curious about<br />what’s <span>underneath.</span></h2></div>
-        <div class="terminal"><div class="terminal-top"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span>~/stmpoh12/about</span></div><div class="terminal-body"><p><b>$ whoami</b></p><p class="green-text">hardware tinkerer + software builder</p><p><b>$ cat interests.txt</b></p><p class="muted">embedded systems<br />pcb design<br />web technologies<br />open-source hardware</p><p><b>$ status</b> <span class="green-text">ready to build_</span></p></div></div>
-      </section>
-
-      <section id="projects" class="section dark-section">
-        <div class="container"><p class="section-label">03 / SELECTED BUILDS</p><div class="section-heading"><h2>From schematic<br />to <span>reality.</span></h2><span class="counter">[ 003 PROJECTS ]</span></div>
-          <div class="projects-grid">
-            <article class="project-card featured"><div class="project-visual sensor-visual"><span class="visual-chip">SENSOR<br />NODE</span><i class="pulse"></i><i class="pulse p2"></i><i class="pulse p3"></i></div><div class="card-content"><span class="project-tag">HARDWARE / 01</span><h3>Environmental Sensor Node</h3><p>A low-power IoT board for collecting temperature, humidity, and air quality data.</p><a href="#contact">View build notes →</a></div></article>
-            <article class="project-card"><div class="project-visual code-visual"><span>&lt;/&gt;</span></div><div class="card-content"><span class="project-tag">SOFTWARE / 02</span><h3>Developer Tooling</h3><p>Small tools and scripts that make the daily engineering loop faster.</p><a href="#contact">Explore project →</a></div></article>
-            <article class="project-card"><div class="project-visual radio-visual"><span class="radio-wave">◉ ))</span></div><div class="card-content"><span class="project-tag">RF / 03</span><h3>Wireless Experiments</h3><p>Learning by building with radio, microcontrollers, and custom antennas.</p><a href="#contact">Explore project →</a></div></article>
-          </div>
-        </div>
-      </section>
-
+      <section id="about" class="section container split"><div><p class="section-label">02 / ABOUT THE BUILDER</p><h2>Curious about<br />what’s <span>underneath.</span></h2></div><div class="terminal"><div class="terminal-top"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span>~/stmpoh12/about</span></div><div class="terminal-body"><p><b>$ whoami</b></p><p class="green-text">hardware tinkerer + software builder</p><p><b>$ cat interests.txt</b></p><p class="muted">embedded systems<br />pcb design<br />web technologies<br />open-source hardware</p><p><b>$ status</b> <span class="green-text">ready to build_</span></p></div></div></section>
+      <section id="projects" class="section dark-section"><div class="container"><p class="section-label">03 / SELECTED BUILDS</p><div class="section-heading"><h2>From schematic<br />to <span>reality.</span></h2><span class="counter">[ 003 PROJECTS ]</span></div><div class="projects-grid"><article class="project-card featured"><div class="project-visual sensor-visual"><span class="visual-chip">SENSOR<br />NODE</span><i class="pulse"></i><i class="pulse p2"></i><i class="pulse p3"></i></div><div class="card-content"><span class="project-tag">HARDWARE / 01</span><h3>Environmental Sensor Node</h3><p>A low-power IoT board for collecting temperature, humidity, and air quality data.</p><a href="#contact">View build notes →</a></div></article><article class="project-card"><div class="project-visual code-visual"><span>&lt;/&gt;</span></div><div class="card-content"><span class="project-tag">SOFTWARE / 02</span><h3>Developer Tooling</h3><p>Small tools and scripts that make the daily engineering loop faster.</p><a href="#contact">Explore project →</a></div></article><article class="project-card"><div class="project-visual radio-visual"><span class="radio-wave">◉ ))</span></div><div class="card-content"><span class="project-tag">RF / 03</span><h3>Wireless Experiments</h3><p>Learning by building with radio, microcontrollers, and custom antennas.</p><a href="#contact">Explore project →</a></div></article></div></div></section>
       <section id="notes" class="section container notes"><p class="section-label">04 / FIELD NOTES</p><div class="section-heading"><h2>Latest from<br />the <span>workbench.</span></h2><a class="text-link" href="#contact">All notes →</a></div><div class="note-list"><a href="#contact"><span class="note-date">2026.09.19</span><strong>Routing my first 4-layer PCB without losing my mind</strong><span>→</span></a><a href="#contact"><span class="note-date">2026.09.12</span><strong>What I learned debugging an I²C bus</strong><span>→</span></a><a href="#contact"><span class="note-date">2026.08.30</span><strong>Building a tiny home lab from scratch</strong><span>→</span></a></div></section>
-
       <section id="contact" class="contact-section"><div class="container contact-box"><p class="section-label">05 / OPEN CHANNEL</p><h2>Have a project<br />in mind?</h2><p>Let’s connect, compare schematics, or build something useful.</p><a class="button primary" href="mailto:stmpoh12@gmail.com">Transmit a message →</a></div></section>
     </main>
     <footer class="site-footer"><div class="container"><span>© <span id="year"></span> STMPoh12</span><span>BUILT WITH CURIOSITY + CODE</span><span class="footer-signal">● SIGNAL: STRONG</span></div></footer>
-    <script src="script.js"></script>
+    <script src="script.js?v=3"></script>
   </body>
 </html>
