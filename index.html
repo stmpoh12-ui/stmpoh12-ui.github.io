@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Personal webpage for a software engineer, maker, and learner."
+    />
+    <title>My Personal Webpage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand">YourName</div>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="hero-copy">
+            <p class="eyebrow">Hello, I'm</p>
+            <h1>Your Name</h1>
+            <p class="tagline">
+              I build thoughtful digital experiences and turn ideas into useful,
+              polished products.
+            </p>
+            <div class="cta-row">
+              <a class="button primary" href="#projects">View Projects</a>
+              <a class="button secondary" href="#contact">Get in Touch</a>
+            </div>
+          </div>
+          <div class="hero-card" aria-label="Profile summary">
+            <div class="avatar">YN</div>
+            <ul>
+              <li>Software Engineer</li>
+              <li>Problem Solver</li>
+              <li>Constant Learner</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container section-inner">
+          <div>
+            <p class="section-label">About</p>
+            <h2>Creating simple solutions with a strong point of view.</h2>
+          </div>
+          <p>
+            I’m a developer who enjoys solving meaningful problems through clear
+            design, clean code, and a practical mindset. I care about building
+            products that feel intuitive, work reliably, and deliver value from
+            the very first interaction.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects" class="section alt">
+        <div class="container">
+          <p class="section-label">Projects</p>
+          <h2>Some things I’ve worked on.</h2>
+          <div class="projects-grid">
+            <article class="project-card">
+              <span class="project-tag">Web</span>
+              <h3>Portfolio Platform</h3>
+              <p>
+                A personal website and portfolio designed to showcase work,
+                process, and ideas in a clean and memorable way.
+              </p>
+            </article>
+            <article class="project-card">
+              <span class="project-tag">Product</span>
+              <h3>Workflow Tool</h3>
+              <p>
+                A practical internal tool for simplifying repetitive operations,
+                improving speed, and reducing friction in daily work.
+              </p>
+            </article>
+            <article class="project-card">
+              <span class="project-tag">Design</span>
+              <h3>UX Experiments</h3>
+              <p>
+                Explorations in interaction design, prototypes, and user-centered
+                systems that turn complex ideas into approachable experiences.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container contact-box">
+          <div>
+            <p class="section-label">Contact</p>
+            <h2>Let’s build something meaningful.</h2>
+          </div>
+          <a class="button primary" href="mailto:you@example.com">you@example.com</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Your Name</p>
+        <p>Made with curiosity and code.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
