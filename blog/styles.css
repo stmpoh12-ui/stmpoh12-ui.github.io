@@ -69,6 +69,28 @@ h1 span { color: #78f59b; }
   color: #91a69a;
   margin-bottom: 2rem;
 }
+
+.cta-row {
+  display: flex;
+  justify-content: flex-start;
+  margin: 1rem 0 2rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+  background: #78f59b;
+  color: #06100a;
+  font: 500 .72rem "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  box-shadow: 0 0 24px rgba(120,245,155,.15);
+}
+.button:hover { transform: translateY(-2px); }
+
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
