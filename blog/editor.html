@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Write and prepare a STMPoh12 technical blog post." />
+  <title>Write Post // STMPoh12</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header"><div class="container nav"><a class="brand" href="../index.html">◈ STMP<span>OH12</span></a><nav class="nav-links"><a href="index.html">Blog</a><a href="../hardware/">Hardware</a><a href="../index.html">Home</a></nav></div></header>
+  <main class="container editor-page"><p class="eyebrow">BLOG EDITOR / LOCAL DRAFT</p><h1>Publish a <span>build log.</span></h1><p class="intro">Draft in Markdown, add hardware photos, then download a bundle ready to commit to GitHub.</p>
+    <div class="editor-layout">
+      <form id="post-form" class="editor-panel">
+        <label for="title">Post title</label><input id="title" required placeholder="Routing my first PCB" />
+        <div class="two-fields"><div><label for="date">Date</label><input id="date" type="date" required /></div><div><label for="category">Category</label><select id="category"><option>hardware</option><option>pcb</option><option>embedded</option><option>software</option><option>lab-notes</option></select></div></div>
+        <label for="summary">Short summary</label><input id="summary" placeholder="What is this build about?" />
+        <label for="body">Article body <small>Markdown supported</small></label><textarea id="body" required placeholder="# What I built\n\nDescribe the problem, design decisions, tests, and lessons learned.\n\n## Results\n\nWhat worked? What would you change next time?"></textarea>
+        <label for="photos">PCB and hardware photos</label><input id="photos" type="file" accept="image/*" multiple /><p class="hint">Photos are previewed locally. They are not uploaded to GitHub automatically.</p><div id="photo-list" class="photo-list"></div>
+        <div class="editor-actions"><button class="button primary" type="submit">Download post bundle ↓</button><button class="button secondary" id="clear" type="button">Clear draft</button></div><p id="message" class="message" role="status"></p>
+      </form>
+      <section class="preview-panel"><div class="preview-head"><span>LIVE PREVIEW</span><span id="word-count">0 words</span></div><article id="preview" class="preview"><p class="muted">Your preview will appear here.</p></article></section>
+    </div>
+    <section class="publish-help"><p class="section-label">PUBLISHING SAFELY</p><p>The download creates a Markdown file and a photo folder. Create a branch such as <code>content/my-pcb-post</code>, upload the files to <code>_posts/</code> and <code>assets/images/</code>, then open a pull request into <code>main</code>.</p></section>
+  </main>
+  <script src="editor.js"></script>
+</body>
+</html>
