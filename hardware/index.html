@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="STMPoh12 hardware lab — PCB design, embedded systems, and electronics experiments." />
+    <title>Hardware Lab // STMPoh12</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html">◈ STMP<span>OH12</span></a>
+        <nav class="nav-links" aria-label="Hardware navigation">
+          <a href="../index.html">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#stack">Lab stack</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <span class="status"><i></i> HARDWARE LAB</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-copy">
+          <p class="eyebrow">HARDWARE / INDEX_01</p>
+          <h1>Build it.<br /><span>Measure it.</span><br />Improve it.</h1>
+          <p class="intro">A dedicated space for PCB layouts, embedded firmware, electronics experiments, and the lessons learned between schematic and working board.</p>
+          <div class="actions">
+            <a class="button primary" href="#projects">View projects →</a>
+            <a class="button secondary" href="../index.html">Back to main site</a>
+          </div>
+        </div>
+        <div class="board" aria-label="Decorative PCB illustration">
+          <div class="board-title">STMP-DEV // REV 01</div>
+          <div class="main-chip">MCU<small>ESP32</small></div>
+          <div class="small-chip">PWR</div>
+          <div class="connector"></div>
+          <div class="trace trace-1"></div><div class="trace trace-2"></div><div class="trace trace-3"></div><div class="trace trace-4"></div><div class="trace trace-5"></div>
+          <div class="via via-1"></div><div class="via via-2"></div><div class="via via-3"></div><div class="via via-4"></div>
+          <div class="led led-cyan"></div><div class="led led-pink"></div>
+          <span class="pin-label pin-a">3V3</span><span class="pin-label pin-b">GND</span><span class="pin-label pin-c">SDA</span>
+        </div>
+      </section>
+
+      <section id="projects" class="section dark-section">
+        <div class="container">
+          <p class="section-label">HARDWARE PROJECTS</p>
+          <div class="heading-row"><h2>From idea<br />to <span>board.</span></h2><span class="counter">[ 003 ACTIVE BUILDS ]</span></div>
+          <div class="project-grid">
+            <article class="project-card featured">
+              <div class="card-number">01</div>
+              <span class="tag">PCB / EMBEDDED</span>
+              <h3>Environmental Sensor Node</h3>
+              <p>A low-power monitoring board for temperature, humidity, and air quality with wireless telemetry.</p>
+              <div class="specs"><span>MCU: ESP32</span><span>STATUS: PROTOTYPE</span></div>
+              <a href="pcb-sensor-node.html">Open project →</a>
+            </article>
+            <article class="project-card">
+              <div class="card-number">02</div>
+              <span class="tag">POWER ELECTRONICS</span>
+              <h3>Bench Power Module</h3>
+              <p>A compact adjustable supply module for powering and testing small prototypes at the bench.</p>
+              <div class="specs"><span>INPUT: 12V DC</span><span>STATUS: PLANNING</span></div>
+              <a href="#contact">Project notes →</a>
+            </article>
+            <article class="project-card">
+              <div class="card-number">03</div>
+              <span class="tag">RF / WIRELESS</span>
+              <h3>Wireless Experiments</h3>
+              <p>Experiments with radio modules, custom antennas, and reliable sensor-to-dashboard communication.</p>
+              <div class="specs"><span>PROTOCOL: 2.4GHz</span><span>STATUS: RESEARCH</span></div>
+              <a href="#contact">Project notes →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="stack" class="section container stack-section">
+        <p class="section-label">LAB STACK</p>
+        <div class="stack-grid">
+          <div><span class="stack-icon">⌁</span><h3>Design</h3><p>Schematics, component selection, PCB layout, and design reviews.</p><code>KiCad · LTspice</code></div>
+          <div><span class="stack-icon">&lt;/&gt;</span><h3>Firmware</h3><p>Drivers, sensor integration, low-power code, and debugging.</p><code>C/C++ · MicroPython</code></div>
+          <div><span class="stack-icon">⌁</span><h3>Test</h3><p>Bring-up, measurement, fault finding, and documenting results.</p><code>Scope · DMM · Logic analyzer</code></div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section"><div class="container contact-box"><p class="section-label">OPEN CHANNEL</p><h2>Have a board<br />to build?</h2><p>Share an idea, a schematic, or a debugging challenge.</p><a class="button primary" href="mailto:stmpoh12@gmail.com">Transmit a message →</a></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="container"><span>© <span id="year"></span> STMPoh12</span><a href="../index.html">← Main site</a><span>STATUS: READY</span></div></footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>
