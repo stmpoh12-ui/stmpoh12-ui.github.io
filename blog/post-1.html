@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Routing my first 4-layer PCB — STMPoh12 tech blog." />
+    <title>Routing my first 4-layer PCB // STMPoh12</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html">◈ STMP<span>OH12</span></a>
+        <nav class="nav-links">
+          <a href="index.html">Blog</a>
+          <a href="../hardware/">Hardware</a>
+          <a href="editor.html">Write</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container post-page">
+      <p class="eyebrow">HARDWARE / 2026.09.19</p>
+      <h1>Routing my first <span>4-layer PCB</span></h1>
+      <p class="intro">It felt like learning a new language at the same time as learning a new craft. The board had to be functional, testable, and compact enough to fit the design goals.</p>
+
+      <article class="post-body">
+        <h2>What I was trying to solve</h2>
+        <p>My first real routing challenge was not just arranging components on a board. It was reducing the amount of noise, simplifying power delivery, and keeping the layout readable enough to debug later.</p>
+
+        <h2>What changed</h2>
+        <p>I started with a much simpler two-layer idea, then realized the power and signal paths were getting crowded. Adding a second internal plane changed the whole workflow: I could separate power and ground more deliberately and keep the routing paths cleaner.</p>
+
+        <h2>Lessons I kept</h2>
+        <ul>
+          <li>Route the critical high-speed paths first, then fill around them.</li>
+          <li>Put test points near the parts that need measurement.</li>
+          <li>Don’t combine power traces and signal traces if they share the same return path.</li>
+          <li>Give the board enough room for debug access while it is still in prototype form.</li>
+        </ul>
+
+        <h2>Next time</h2>
+        <p>I want to do a tighter review of the power tree before placement, then run a more complete ground strategy before generating the final Gerbers. The trick is not just making it work — it is making it easier to troubleshoot once it does.</p>
+      </article>
+
+      <p><a class="back-link" href="index.html">← Back to blog</a></p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container"><span>© <span id="year"></span> STMPoh12</span><span>BUILD LOG ONLINE</span></div>
+    </footer>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>

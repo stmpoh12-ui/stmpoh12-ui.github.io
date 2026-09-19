@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="What I learned debugging an I²C bus — STMPoh12 tech blog." />
+    <title>What I learned debugging an I²C bus // STMPoh12</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500,600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html">◈ STMP<span>OH12</span></a>
+        <nav class="nav-links">
+          <a href="index.html">Blog</a>
+          <a href="../hardware/">Hardware</a>
+          <a href="editor.html">Write</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container post-page">
+      <p class="eyebrow">DEBUGGING / 2026.09.12</p>
+      <h1>What I learned debugging an <span>I²C bus</span></h1>
+      <p class="intro">The first time a sensor fails to respond, it can feel like a software problem. In practice, it is often a physical one: pull-ups, bus length, or power stability.</p>
+
+      <article class="post-body">
+        <h2>Start with the basics</h2>
+        <p>I had the board powered, the code compiling, and the sensor addresses printed to the console. Still, the bus kept failing intermittently. The actual issue turned out to be a weak pull-up network combined with a long trace.</p>
+
+        <h2>The fix was simple but important</h2>
+        <p>I checked the logic analyzer, verified the timing, and then measured the voltage at the rails. A small change in the resistor values improved the rise time enough to make the entire bus stable.</p>
+
+        <ul>
+          <li>Confirm that the slave has a valid device address.</li>
+          <li>Measure the SDA and SCL lines with a scope.</li>
+          <li>Check for unstable ground return paths.</li>
+          <li>Verify pull-up strength against the bus capacitance.</li>
+        </ul>
+
+        <h2>Why this matters</h2>
+        <p>The best debugging habit is to stop assuming the code is wrong before verifying the electrical layer. Once the signal integrity is clean, the firmware issues are much easier to isolate.</p>
+      </article>
+
+      <p><a class="back-link" href="index.html">← Back to blog</a></p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container"><span>© <span id="year"></span> STMPoh12</span><span>BUILD LOG ONLINE</span></div>
+    </footer>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>
