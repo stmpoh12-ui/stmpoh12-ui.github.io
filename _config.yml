@@ -1,0 +1,10 @@
+
+title: "STMPoh12"
+description: "Hardware, Software and Travel Journal"
+url: "https://stmpoh12-ui.github.io"
+baseurl: ""
+
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title/
+
+collections: {}
