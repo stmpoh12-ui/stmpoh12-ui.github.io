@@ -1,4 +1,7 @@
 
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +27,6 @@
     }
 
     header { border-bottom: 1px solid #374151; }
-
     a { color: #7dd3fc; }
 
     .tag {
@@ -35,7 +37,6 @@
     }
 
     h1 { font-size: clamp(2rem, 6vw, 3.5rem); }
-
     .intro { color: #cbd5e1; font-size: 1.1rem; }
 
     .post {
@@ -47,6 +48,7 @@
     }
 
     .post h3 { margin-top: 0; }
+    .post-meta { color: #9ca3af; font-size: 0.9rem; }
 
     footer {
       color: #9ca3af;
@@ -56,7 +58,7 @@
 </head>
 <body>
   <header>
-    <a href="index.html">← Back to STMPoh12 Home</a>
+    <a href="{{ '/' | relative_url }}">← Back to STMPoh12 Home</a>
     <p class="tag">STMPoh12 / Travel</p>
     <h1>Travel Journal</h1>
     <p class="intro">
@@ -69,24 +71,35 @@
     <section>
       <h2>Latest Stories</h2>
 
-      <article class="post">
-        <p class="tag">Getting Started</p>
-        <h3>My Travel Journal Begins</h3>
-        <p>
-          A place to document future trips, useful itineraries,
-          photography, transport tips and lessons learned.
-        </p>
-        <p><em>First entry coming soon.</em></p>
-      </article>
+      {% assign travel_posts = site.posts | where_exp: "post", "post.categories contains 'travel' or post.path contains '_posts/'" %}
 
-      <article class="post">
-        <p class="tag">Travel Planning</p>
-        <h3>How I Plan a Trip</h3>
-        <p>
-          Record your research, budget, route, accommodation,
-          packing checklist and useful links for each journey.
-        </p>
-      </article>
+      {% if travel_posts.size > 0 %}
+        {% for post in travel_posts %}
+          {% if post.categories contains 'travel' or post.path contains '_posts/' %}
+            <article class="post">
+              <p class="tag">
+                {{ post.destination | default: "Travel Journal" }}
+              </p>
+              <h3>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </h3>
+              <p class="post-meta">
+                {{ post.date | date: "%d %B %Y" }}
+              </p>
+              {% if post.excerpt %}
+                <p>{{ post.excerpt | strip_html | truncate: 220 }}</p>
+              {% endif %}
+              <p><a href="{{ post.url | relative_url }}">Read story →</a></p>
+            </article>
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        <article class="post">
+          <p class="tag">Getting Started</p>
+          <h3>My Travel Journal Begins</h3>
+          <p>Your first travel story will appear here when published.</p>
+        </article>
+      {% endif %}
     </section>
 
     <section>
@@ -102,7 +115,7 @@
 
   <footer>
     <p>STMPoh12 — Travel, Engineering &amp; Exploration</p>
-    <a href="index.html">Home</a>
+    <a href="{{ '/' | relative_url }}">Home</a>
   </footer>
 </body>
 </html>
